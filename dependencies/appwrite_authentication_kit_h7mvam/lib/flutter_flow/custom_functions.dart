@@ -8,7 +8,6 @@ import 'package:timeago/timeago.dart' as timeago;
 import 'package:ff_commons/flutter_flow/lat_lng.dart';
 import 'package:ff_commons/flutter_flow/place.dart';
 import 'package:ff_commons/flutter_flow/uploaded_file.dart';
-import '/library_values.dart';
 
 String? handleError(
   String? errorMessage,
@@ -21,7 +20,7 @@ String? handleError(
   // Network errors are common to all actions
   if (message.contains('XMLHttpRequest') ||
       message.contains('xmlhttprequest')) {
-    return 'Unable to connect. Please check your internet connection and try again';
+    return 'Unable to connect to the service. Please try again later';
   }
 
   // Handle errors based on action type

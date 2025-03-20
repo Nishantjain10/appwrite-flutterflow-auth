@@ -12,11 +12,8 @@ import 'package:appwrite/appwrite.dart';
 import 'dart:convert';
 export 'initialize.dart';
 
-// Initialize client ONCE at the top level
-final Client client = Client()
-  ..setEndpoint(FFLibraryValues().endpoint)
-  ..setProject(FFLibraryValues().projectId)
-  ..setSelfSigned(status: true);
+// Initialize client - will be configured during initialize()
+final Client client = Client();
 
 // Initialize account ONCE using the single client instance
 final Account account = Account(client);
@@ -26,6 +23,12 @@ Future<dynamic> initialize(
   String projectId,
 ) async {
   try {
+    // Configure client with provided parameters
+    client
+      ..setEndpoint(endpoint)
+      ..setProject(projectId)
+      ..setSelfSigned(status: true);
+
     // Validate config
     if (endpoint.isEmpty || projectId.isEmpty) {
       return {
@@ -33,11 +36,9 @@ Future<dynamic> initialize(
         'error': 'Configuration error: Missing endpoint or project ID'
       };
     }
-
     // Store config
     FFAppState().appwriteConfig = jsonEncode(
         {"endpoint": endpoint, "projectId": projectId, "initialized": true});
-
     // Get and store user data
     final user = await account.get();
     FFAppState().appwriteUser = jsonEncode({
@@ -47,7 +48,6 @@ Future<dynamic> initialize(
       'emailVerified': user.emailVerification,
       'status': user.status,
     });
-
     return true;
   } on AppwriteException catch (e) {
     return {

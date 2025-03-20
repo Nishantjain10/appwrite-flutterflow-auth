@@ -38,8 +38,8 @@ class _SplashWidgetState extends State<SplashWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.initializeResult = await actions.initialize(
-        FFLibraryValues().endpoint,
-        FFLibraryValues().projectId,
+        'https://cloud.appwrite.io/v1',
+        '677bd5cc003630d0aea1',
       );
       if (_model.initializeResult == true) {
         context.pushNamed(WelcomeWidget.routeName);

@@ -28,7 +28,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   appwrite_authentication_kit_h7mvam:
-    path: ./dependencies/appwrite_authentication_kit_h7mvam # 0.0.1
+    path: ./dependencies/appwrite_authentication_kit_h7mvam # 0.0.4
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1
   cached_network_image_platform_interface: 4.1.1
@@ -80,7 +80,6 @@ dependencies:
 dependency_overrides:
   http: 1.2.2
   uuid: ^4.0.0
-  collection: ^1.18.0
 
 dev_dependencies:
   flutter_lints: 4.0.0

@@ -7,8 +7,6 @@ import 'flutter_flow/flutter_flow_util.dart';
 
 import 'package:appwrite_authentication_kit_h7mvam/app_state.dart'
     as appwrite_authentication_kit_h7mvam_app_state;
-import 'package:appwrite_authentication_kit_h7mvam/library_values.dart'
-    as appwrite_authentication_kit_h7mvam_library_values;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,11 +15,6 @@ void main() async {
 
   final environmentValues = FFDevEnvironmentValues();
   await environmentValues.initialize();
-
-  appwrite_authentication_kit_h7mvam_library_values.FFLibraryValues().endpoint =
-      FFLibraryValues().apiEndpoint;
-  appwrite_authentication_kit_h7mvam_library_values.FFLibraryValues()
-      .projectId = FFLibraryValues().projectId;
 
   final appwrite_authentication_kit_h7mvamAppState =
       appwrite_authentication_kit_h7mvam_app_state.FFAppState();
