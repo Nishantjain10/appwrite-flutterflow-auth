@@ -15,6 +15,9 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
+  final environmentValues = FFDevEnvironmentValues();
+  await environmentValues.initialize();
+
   appwrite_authentication_kit_h7mvam_library_values.FFLibraryValues().endpoint =
       FFLibraryValues().apiEndpoint;
   appwrite_authentication_kit_h7mvam_library_values.FFLibraryValues()

@@ -115,6 +115,7 @@ flutter:
     - dependencies/appwrite_authentication_kit_h7mvam/assets/pdfs/
     - dependencies/appwrite_authentication_kit_h7mvam/assets/jsons/
 
+    - assets/environment_values/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
