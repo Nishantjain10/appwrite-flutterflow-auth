@@ -35,8 +35,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.initializeResult =
           await appwrite_authentication_kit_h7mvam_actions.initialize(
-        'https://cloud.appwrite.io/v1',
-        '677bd5cc003630d0aea1',
+        FFDevEnvironmentValues().AppwriteAPIEndpoint,
+        FFDevEnvironmentValues().AppwriteProjectId,
       );
       if (_model.initializeResult == true) {
         context.pushNamed(DashboardWidget.routeName);
