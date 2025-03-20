@@ -369,7 +369,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           height: 100.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover,
                               alignment: AlignmentDirectional(0.0, 0.1),
                               image: Image.asset(
                                 'assets/images/bg-desktop.png',
