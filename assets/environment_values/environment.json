@@ -1,4 +1,4 @@
 {
   "AppwriteAPIEndpoint": "https://cloud.appwrite.io/v1",
-"AppwriteProjectId": "your_project_id"
+  "AppwriteProjectId": "$APPWRITE_PROJECT_ID"
 }
